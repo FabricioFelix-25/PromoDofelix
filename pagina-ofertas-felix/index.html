@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10151c">
+  <meta name="description" content="Cupons e promoções selecionadas no grupo Ofertas do Felix. Entre grátis pelo WhatsApp e confira cada oferta na loja.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ofertas do Felix — Promoções e cupons">
+  <meta property="og:description" content="Entre grátis no grupo e acompanhe ofertas e cupons de várias lojas.">
+  <title>Ofertas do Felix | Promoções e cupons</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #10151c;
+      --panel: #171f29;
+      --panel-2: #202b38;
+      --text: #f4f7fb;
+      --muted: #aab6c5;
+      --lime: #c8f169;
+      --mint: #43d8aa;
+      --line: rgba(255,255,255,.1);
+      --shadow: 0 24px 70px rgba(0,0,0,.35);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(ellipse at 88% 8%, rgba(67,216,170,.12), transparent 32rem),
+        radial-gradient(ellipse at 5% 28%, rgba(200,241,105,.08), transparent 29rem),
+        var(--bg);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    a { color: inherit; }
+    .wrap { width: min(1100px, calc(100% - 40px)); margin-inline: auto; }
+    .topbar { display:flex; justify-content:space-between; align-items:center; padding:22px 0; }
+    .brand { display:flex; gap:11px; align-items:center; text-decoration:none; font-weight:800; letter-spacing:-.03em; }
+    .brand-mark { width:46px; height:46px; flex:0 0 46px; overflow:hidden; border:2px solid rgba(255,255,255,.2); border-radius:50%; background:#2e6fa2; box-shadow:0 8px 25px rgba(67,159,255,.2); }
+    .brand-mark img { display:block; width:100%; height:100%; object-fit:cover; }
+    .top-note { color:var(--muted); font-size:13px; }
+    .hero { display:grid; grid-template-columns:1.05fr .95fr; gap:56px; align-items:center; padding:64px 0 84px; }
+    .eyebrow { display:inline-flex; align-items:center; gap:9px; padding:7px 11px; border:1px solid var(--line); border-radius:999px; color:#d9e7c3; background:rgba(255,255,255,.035); font-size:12px; font-weight:700; letter-spacing:.09em; text-transform:uppercase; }
+    .live-dot { width:8px; height:8px; border-radius:50%; background:var(--mint); box-shadow:0 0 0 4px rgba(67,216,170,.13); }
+    h1 { max-width:650px; margin:23px 0 18px; font-size:clamp(42px,6vw,70px); line-height:.99; letter-spacing:-.065em; }
+    h1 span { color:var(--lime); }
+    .lead { max-width:550px; color:#c1ccd8; font-size:18px; line-height:1.65; }
+    .actions { display:flex; align-items:center; gap:15px; flex-wrap:wrap; margin-top:31px; }
+    .button { min-height:55px; display:inline-flex; justify-content:center; align-items:center; gap:11px; padding:0 21px; border-radius:15px; background:var(--lime); color:#172018; font-weight:850; text-decoration:none; box-shadow:0 12px 32px rgba(200,241,105,.14); transition:transform .18s ease, box-shadow .18s ease; }
+    .button:hover { transform:translateY(-2px); box-shadow:0 16px 38px rgba(200,241,105,.22); }
+    .button svg { width:21px; height:21px; }
+    .free-note { color:var(--muted); font-size:13px; }
+    .stores { display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-top:32px; }
+    .stores-label { color:#8997a7; font-size:12px; margin-right:3px; }
+    .store { padding:6px 10px; border:1px solid var(--line); border-radius:999px; color:#d8e0e9; background:rgba(255,255,255,.025); font-size:12px; font-weight:650; }
+    .showcase { position:relative; min-height:410px; display:grid; place-items:center; }
+    .glow { position:absolute; inset:12% 8%; background:linear-gradient(135deg,rgba(200,241,105,.18),rgba(67,216,170,.1)); filter:blur(65px); border-radius:50%; }
+    .brand-image { position:relative; width:min(100%,480px); overflow:hidden; border:1px solid rgba(255,255,255,.14); border-radius:25px; background:#2e6fa2; box-shadow:var(--shadow); transform:rotate(1.5deg); }
+    .brand-image img { display:block; width:100%; height:auto; }
+    .float-tag { position:absolute; right:0; bottom:4%; padding:12px 16px; border:1px solid var(--line); border-radius:15px; background:#202b38; box-shadow:var(--shadow); color:#e2e9f0; font-size:13px; transform:rotate(-4deg); }
+    .float-tag b { color:var(--mint); }
+    .section { padding:37px 0 83px; }
+    .section-heading { max-width:650px; margin-bottom:27px; }
+    .section-heading h2 { margin:0 0 8px; font-size:clamp(28px,4vw,40px); letter-spacing:-.05em; }
+    .section-heading p { margin:0; color:var(--muted); }
+    .benefits { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+    .benefit { min-height:174px; padding:22px; border:1px solid var(--line); border-radius:19px; background:rgba(255,255,255,.035); }
+    .benefit-icon { width:40px; height:40px; display:grid; place-items:center; margin-bottom:16px; border-radius:13px; background:rgba(200,241,105,.11); color:var(--lime); font-size:19px; }
+    .benefit h3 { margin:0 0 6px; font-size:16px; }
+    .benefit p { margin:0; color:var(--muted); font-size:14px; }
+    .sample-section { padding:0 0 77px; }
+    .example-note { display:inline-flex; gap:8px; align-items:center; margin:0 0 18px; padding:8px 11px; border:1px solid rgba(255,204,102,.23); border-radius:10px; background:rgba(255,204,102,.06); color:#f2d69c; font-size:12px; }
+    .sample-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+    .sample-card { padding:20px; border:1px solid var(--line); border-radius:19px; background:linear-gradient(155deg,rgba(35,47,60,.9),rgba(255,255,255,.025)); }
+    .sample-visual { height:138px; display:grid; place-items:center; margin:-4px 0 17px; overflow:hidden; border:1px solid rgba(255,255,255,.07); border-radius:14px; background:#fff; }
+    .sample-visual img { display:block; width:100%; height:100%; padding:8px; object-fit:contain; }
+    .sample-category { color:#aab6c5; font-size:11px; font-weight:750; letter-spacing:.1em; text-transform:uppercase; }
+    .sample-card h3 { min-height:48px; margin:10px 0 16px; font-size:17px; line-height:1.4; }
+    .price-row { display:flex; align-items:baseline; gap:8px; flex-wrap:wrap; }
+    .old-price { color:#8794a2; font-size:13px; text-decoration:line-through; }
+    .new-price { color:var(--text); font-size:23px; font-weight:850; letter-spacing:-.04em; }
+    .discount { display:inline-flex; margin-top:12px; padding:6px 9px; border-radius:9px; background:rgba(200,241,105,.12); color:var(--lime); font-size:12px; font-weight:800; }
+    .coupon { display:block; margin-top:10px; color:#cbd5df; font-size:12px; }
+    .coupon b { color:#f0b1ff; }
+    .sample-footnote { margin:14px 0 0; color:#8f9cac; font-size:12px; }
+    .join-panel { display:flex; justify-content:space-between; align-items:center; gap:25px; margin:0 auto 76px; padding:30px; border:1px solid rgba(200,241,105,.22); border-radius:24px; background:linear-gradient(110deg,rgba(200,241,105,.09),rgba(67,216,170,.055)); }
+    .join-panel h2 { margin:0 0 5px; font-size:25px; letter-spacing:-.04em; }
+    .join-panel p { margin:0; color:#bdc8d5; }
+    .disclosure { margin:0 auto 25px; padding:17px 19px; border-left:3px solid #84975a; border-radius:0 12px 12px 0; background:rgba(255,255,255,.035); color:#aeb9c5; font-size:12px; }
+    footer { padding:21px 0 28px; border-top:1px solid var(--line); color:#8492a1; font-size:12px; }
+    .footer-inner { display:flex; justify-content:space-between; gap:18px; flex-wrap:wrap; }
+    :focus-visible { outline:3px solid #fff; outline-offset:4px; }
+    @media (max-width:780px) {
+      .wrap { width:min(100% - 30px,560px); }
+      .top-note { display:none; }
+      .hero { grid-template-columns:1fr; gap:20px; padding:43px 0 52px; }
+      h1 { font-size:clamp(43px,12vw,62px); }
+      .lead { font-size:16px; }
+      .showcase { min-height:350px; }
+      .brand-image { width:min(100%,430px); }
+      .float-tag { right:0; bottom:0; }
+      .benefits { grid-template-columns:1fr; }
+      .benefit { min-height:0; }
+      .sample-grid { grid-template-columns:1fr; }
+      .sample-card h3 { min-height:0; }
+      .join-panel { flex-direction:column; align-items:flex-start; margin-bottom:52px; padding:23px; }
+      .join-panel .button { width:100%; }
+      .section { padding-bottom:52px; }
+    }
+    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { transition:none !important; } }
+  </style>
+</head>
+<body>
+  <header class="wrap topbar">
+    <a class="brand" href="#top" aria-label="Ofertas do Felix, início">
+      <span class="brand-mark" aria-hidden="true"><img src="assets/logo-ofertas-do-felix.jpeg" alt=""></span>
+      <span>Ofertas do Felix</span>
+    </a>
+    <span class="top-note">Promoções e cupons em um só lugar</span>
+  </header>
+
+  <main id="top">
+    <section class="wrap hero" aria-labelledby="hero-title">
+      <div>
+        <div class="eyebrow"><span class="live-dot" aria-hidden="true"></span> Grupo gratuito no WhatsApp</div>
+        <h1 id="hero-title">Boas ofertas.<br><span>Sem perder tempo.</span></h1>
+        <p class="lead">Acompanhe promoções e cupons selecionados de várias lojas, com links para conferir os detalhes direto na página do produto.</p>
+        <div class="actions">
+          <a class="button" href="https://chat.whatsapp.com/HztuWtIbHT9CVcVjLtE9aa" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.82 11.82 0 0 0 12.08 0C5.53 0 .2 5.33.2 11.88c0 2.09.55 4.13 1.59 5.93L.1 24l6.34-1.66a11.9 11.9 0 0 0 5.64 1.44h.01c6.55 0 11.88-5.33 11.88-11.88 0-3.17-1.24-6.15-3.45-8.42ZM12.09 21.76a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.76.99 1-3.66-.24-.38a9.85 9.85 0 0 1-1.51-5.24c0-5.47 4.45-9.92 9.92-9.92 2.65 0 5.14 1.03 7.01 2.91a9.86 9.86 0 0 1 2.9 7.02c0 5.47-4.45 9.92-9.92 9.92Zm5.44-7.43c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.47-2.4-1.49-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.07-.15-.68-1.64-.93-2.25-.24-.59-.49-.51-.68-.52l-.58-.01c-.2 0-.53.08-.8.38-.28.3-1.06 1.03-1.06 2.52s1.08 2.92 1.23 3.12c.15.2 2.12 3.24 5.14 4.54.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.77-.73 2.02-1.43.25-.7.25-1.29.17-1.42-.08-.12-.28-.2-.58-.35Z"/></svg>
+            Entrar grátis no grupo
+          </a>
+          <span class="free-note">Você abre o convite do grupo no WhatsApp.</span>
+        </div>
+        <div class="stores" aria-label="Lojas acompanhadas">
+          <span class="stores-label">Ofertas de:</span>
+          <span class="store">Amazon</span><span class="store">Mercado Livre</span><span class="store">Shopee</span><span class="store">Magalu</span>
+        </div>
+      </div>
+
+      <div class="showcase">
+        <div class="glow" aria-hidden="true"></div>
+        <div class="brand-image"><img src="assets/ofertas-do-felix.jpeg" alt="Arte do Ofertas do Felix com um mascote, cupons e promoções" fetchpriority="high"></div>
+        <div class="float-tag"><b>✓</b> Entre sem pagar nada</div>
+      </div>
+    </section>
+
+    <section class="wrap section" aria-labelledby="features-title">
+      <div class="section-heading">
+        <h2 id="features-title">Um grupo focado em ofertas.</h2>
+        <p>Veja a promoção, confira as condições na loja e decida se vale a pena para você.</p>
+      </div>
+      <div class="benefits">
+        <article class="benefit"><div class="benefit-icon" aria-hidden="true">%</div><h3>Cupons e promoções</h3><p>Descontos e oportunidades de diferentes categorias e lojas.</p></article>
+        <article class="benefit"><div class="benefit-icon" aria-hidden="true">↗</div><h3>Links para conferir</h3><p>Abra a página da oferta e confirme preço, frete, estoque e regras do cupom.</p></article>
+        <article class="benefit"><div class="benefit-icon" aria-hidden="true">⌁</div><h3>Você no controle</h3><p>Entre pelo WhatsApp e saia do grupo quando quiser, direto pelo aplicativo.</p></article>
+      </div>
+    </section>
+
+    <section class="wrap sample-section" aria-labelledby="samples-title">
+      <div class="section-heading">
+        <h2 id="samples-title">Veja exemplos de ofertas.</h2>
+        <p>O grupo compartilha achados de diferentes categorias, com preço e cupom quando informados.</p>
+      </div>
+      <p class="example-note"><span aria-hidden="true">ⓘ</span> Exemplos de promoções divulgadas anteriormente — preços e cupons podem ter expirado.</p>
+      <div class="sample-grid">
+        <article class="sample-card">
+          <div class="sample-visual"><img src="assets/produto-tenis.jpg" alt="Tênis esportivo branco e preto usado como exemplo de oferta" loading="lazy"></div>
+          <span class="sample-category">Moda e calçados</span>
+          <h3>Tênis Sandrini Storm Wave</h3>
+          <div class="price-row"><span class="old-price">De R$ 187,50</span><span class="new-price">R$ 67,14</span></div>
+          <span class="discount">64% de desconto*</span>
+          <span class="coupon">Exemplo de cupom: <b>MELHORCUPOM</b></span>
+        </article>
+        <article class="sample-card">
+          <div class="sample-visual"><img src="assets/produto-monitor.jpg" alt="Monitor Philips Evnia usado como exemplo de oferta" loading="lazy"></div>
+          <span class="sample-category">Tecnologia</span>
+          <h3>Monitor Philips Evnia</h3>
+          <div class="price-row"><span class="old-price">De R$ 559,00</span><span class="new-price">R$ 489,00</span></div>
+          <span class="discount">13% de desconto*</span>
+          <span class="coupon">Exemplo de cupom: <b>PROMOHOJE</b> + Pix</span>
+        </article>
+        <article class="sample-card">
+          <div class="sample-visual"><img src="assets/produto-pneu.jpg" alt="Pneu de motocicleta usado como exemplo de oferta" loading="lazy"></div>
+          <span class="sample-category">Automotivo</span>
+          <h3>Pneu Maggion para Fazer 250</h3>
+          <div class="price-row"><span class="old-price">De R$ 649,99</span><span class="new-price">R$ 483,59</span></div>
+          <span class="discount">26% de desconto*</span>
+          <span class="coupon">Exemplo de condição: <b>com cupom</b></span>
+        </article>
+      </div>
+      <p class="sample-footnote">* Percentual aproximado calculado a partir dos preços dos exemplos. As ofertas, preços e cupons acima não são apresentados como ativos; as imagens não indicam estoque ou preço atual.</p>
+    </section>
+
+    <section class="wrap join-panel" aria-labelledby="join-title">
+      <div><h2 id="join-title">Quer acompanhar as próximas ofertas?</h2><p>Entre grátis no grupo Ofertas do Felix pelo WhatsApp.</p></div>
+      <a class="button" href="https://chat.whatsapp.com/HztuWtIbHT9CVcVjLtE9aa" target="_blank" rel="noopener noreferrer">Abrir grupo no WhatsApp <span aria-hidden="true">↗</span></a>
+    </section>
+
+    <aside class="wrap disclosure"><strong>Transparência:</strong> algumas publicações podem conter links de afiliado. Se uma compra for feita por esses links, o grupo poderá receber comissão, sem custo adicional para você. Preços, cupons, frete e disponibilidade podem mudar; confirme as condições na loja antes de comprar. Os exemplos desta página são de divulgações anteriores e podem não estar mais válidos.</aside>
+  </main>
+
+  <footer><div class="wrap footer-inner"><span>© <span id="year">2026</span> Ofertas do Felix</span><span>Esta página não coleta telefone, e-mail ou dados de pagamento.</span></div></footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
